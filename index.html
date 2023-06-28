@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/p5.js"></script>
+    <script src="js/canvas.js"></script>
+    <title>Fanatic Cards</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="website-cont">
+            <div class="setup-cont">
+                <div class="setup-content">
+                    <h1>Join de <span>Fanatic</span> Club!</h1>
+                    <h2>Laat je auto zien, en zet haar
+                        letterlijk op de kaart! Vul
+                        hieronder wat gegevens in en
+                        creëer zo je eigen 'Fanatic Club Card'. </h2>
+                    <h3>De Auto</h3>
+                    <div class="input-cont1">
+                        <div class="titel-auto p-en-input">
+                            <p>Titel Auto</p>
+                            <input placeholder="Zet hier de naam van je auto neer" class="titel-auto-input" type="text">
+                        </div>
+
+                        <div class="topsnelheid p-en-input">
+                            <p>Topsnelheid</p>
+                            <input class="topsnelheid-input" type="text">
+                        </div>
+
+                        <div class="pk p-en-input">
+                            <p>PK</p>
+                            <input class="pk-input" type="text">
+                        </div>
+
+                        <div class="accel p-en-input">
+                            <p>0 Tot 100</p>
+                            <input class="accel-input" type="text">
+                        </div>
+                    </div>
+
+                    <h3>Socials</h3>
+
+                    <div class="input-cont2">
+                        <div class="instagram p-en-input">
+                            <p>Instagram</p>
+                            <input class="instagram-input" type="text">
+                        </div>
+
+                        <div class="facebook p-en-input">
+                            <p>Facebook</p>
+                            <input class="facebook-input" type="text">
+                        </div>
+                    </div>
+
+                    <button onclick="downloadElementImage()" class="download">DOWNLOAD</button>
+                </div>
+            </div>
+            <div class="card-cont">
+
+                <div class="flag-box"><img src="assets/icons/flag.svg" alt=""></div>
+
+                <div class="center">
+                    <div class="form-input">
+                        <div class="preview">
+                            <img id="file-ip-1-preview">
+                        </div>
+                        <label for="file-ip-1">Upload Image</label>
+                        <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+
+                    </div>
+                </div>
+
+                <div class="output-cont">
+                    <h3 class="output-text titel-auto-output"></h3>
+
+                    <div class="specs-cont">
+
+                        <div class="topsnelheid-box box"><img src="assets/icons/speed.svg" alt="">
+                            <p class="topsnelheid-output output-text"></p>
+                            <p class="eenheid output-text">Km/h</p>
+                        </div>
+
+                        <div class="accel-box box"><img src="assets/icons/accel.svg" alt="">
+                            <p class="accel-output output-text"></p>
+                            <p class="eenheid output-text">sec</p>
+                        </div>
+
+                        <div class="pk-box box"><img src="assets/icons/HP.svg" alt="">
+                            <p class="pk-output output-text"></p>
+                            <p class="eenheid output-text">pk</p>
+                        </div>
+
+                        <div class="instagram-box box"><img src="assets/icons/insta.svg" alt="">
+                            <p class="instagram-output output-text"></p>
+
+                        </div>
+
+                        <div class="facebook-box box"><img src="assets/icons/facebook.svg" alt="">
+                            <p class="facebook-output output-text"></p>
+
+                        </div>
+
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="logo-box"><img src="assets/icons/logo.svg" alt=""></div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</body>
+
+</html>
