@@ -1,28 +1,34 @@
-// fade bg 
+// fade bg - source: https://thenewcode.com/991/Cross-Fading-Background-Images
 
-var bgImageArray = ["../assets/images/auto-01.jpg","../assets/images/auto-02.jpg","../assets/images/auto-03.jpg"],
+var bgImageArray = [
+    "../assets/images/auto-01.jpg",
+    "../assets/images/auto-02.jpg",
+    "../assets/images/auto-03.jpg"
+];
+
 base = "",
-secs = 6;
+    secs = 6;
 
-bgImageArray.forEach(function(img){
-    new Image().src = base + img; 
+bgImageArray.forEach(function (img) {
+    new Image().src = base + img;
 });
 
 function backgroundSequence() {
     window.clearTimeout();
-        var k = 0;
-        for (var i = 0; i < bgImageArray.length; i++) {
-            setTimeout(function(){
-    document.documentElement.style.background = "url(" + base + bgImageArray[k] + ") no-repeat center center fixed";
-    document.documentElement.style.backgroundSize ="cover";
-                if ((k + 1) === bgImageArray.length) {
-                    setTimeout(function() {
-                        backgroundSequence() }, (secs * 1000))
-                } else { k++; }
-            }, (secs * 1000) * i) 
-        }
+    var k = 0;
+    for (var i = 0; i < bgImageArray.length; i++) {
+        setTimeout(function () {
+            document.documentElement.style.background = "url(" + base + bgImageArray[k] + ") no-repeat center center fixed";
+            document.documentElement.style.backgroundSize = "cover";
+            if ((k + 1) === bgImageArray.length) {
+                setTimeout(function () {
+                    backgroundSequence()
+                }, (secs * 1000))
+            } else { k++; }
+        }, (secs * 1000) * i)
     }
-    backgroundSequence();
+}
+backgroundSequence();
 
 // upload - source: https://codepen.io/fghty/pen/QWvPWoR
 
