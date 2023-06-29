@@ -6,11 +6,10 @@ var bgImageArray = [
     "assets/images/auto-03.jpg"
 ];
 
-var base = "/fanatic-cards/",
-    secs = 6;
+    var secs = 6;
 
 bgImageArray.forEach(function (img) {
-    new Image().src = base + img;
+    new Image().src = img;
 });
 
 function backgroundSequence() {
@@ -18,7 +17,7 @@ function backgroundSequence() {
     var k = 0;
     for (var i = 0; i < bgImageArray.length; i++) {
         setTimeout(function () {
-            document.documentElement.style.background = "url(" + base + bgImageArray[k] + ") no-repeat center center fixed";
+            document.documentElement.style.background = "url(" + bgImageArray[k] + ") no-repeat center center fixed";
             document.documentElement.style.backgroundSize = "cover";
             if ((k + 1) === bgImageArray.length) {
                 setTimeout(function () {
