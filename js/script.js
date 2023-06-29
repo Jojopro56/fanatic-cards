@@ -1,12 +1,12 @@
 // fade bg - source: https://thenewcode.com/991/Cross-Fading-Background-Images
 
 var bgImageArray = [
-    "../assets/images/auto-01.jpg",
-    "../assets/images/auto-02.jpg",
-    "../assets/images/auto-03.jpg"
+    "assets/images/auto-01.jpg",
+    "assets/images/auto-02.jpg",
+    "assets/images/auto-03.jpg"
 ];
 
-base = "",
+var base = "/fanatic-cards/",
     secs = 6;
 
 bgImageArray.forEach(function (img) {
