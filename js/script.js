@@ -1,3 +1,29 @@
+// fade bg 
+
+var bgImageArray = ["../assets/images/auto-01.jpg","../assets/images/auto-02.jpg","../assets/images/auto-03.jpg"],
+base = "",
+secs = 6;
+
+bgImageArray.forEach(function(img){
+    new Image().src = base + img; 
+});
+
+function backgroundSequence() {
+    window.clearTimeout();
+        var k = 0;
+        for (var i = 0; i < bgImageArray.length; i++) {
+            setTimeout(function(){
+    document.documentElement.style.background = "url(" + base + bgImageArray[k] + ") no-repeat center center fixed";
+    document.documentElement.style.backgroundSize ="cover";
+                if ((k + 1) === bgImageArray.length) {
+                    setTimeout(function() {
+                        backgroundSequence() }, (secs * 1000))
+                } else { k++; }
+            }, (secs * 1000) * i) 
+        }
+    }
+    backgroundSequence();
+
 // upload - source: https://codepen.io/fghty/pen/QWvPWoR
 
 function showPreview(event) {
@@ -11,6 +37,33 @@ function showPreview(event) {
         uploadButton.style.display = "none";
     }
 }
+
+// login
+
+function checkCode() {
+    var enteredCode = document.getElementById("codeInput").value;
+    var errorMessageElement = document.getElementById("errorMessage");
+
+    // Check if the entered code exists in the array of codes
+    if (codes.includes(enteredCode)) {
+        const inputCont = document.querySelector('.setup-specs-cont')
+        const loginCont = document.querySelector('.login-cont')
+        inputCont.style.display = 'block';
+        loginCont.style.display = 'none';
+        // Perform the login action here
+
+        // Clear the error message
+        errorMessageElement.textContent = "";
+        errorMessageElement.style.display = "none";
+    } else {
+        errorMessageElement.textContent = "Invalid code";
+        errorMessageElement.style.display = "block";
+    }
+}
+
+
+
+
 
 /*input/output*/
 
@@ -67,8 +120,8 @@ input6.addEventListener('input', function () {
 
 function downloadElementImage() {
     const element = document.querySelector('.card-cont');
-    
-    html2canvas(element).then(function(canvas) {
+
+    html2canvas(element).then(function (canvas) {
         // Create an <a> element to download the image
         const link = document.createElement('a');
         link.href = canvas.toDataURL();

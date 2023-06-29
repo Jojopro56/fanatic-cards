@@ -134,11 +134,20 @@ table {
 	border-spacing: 0;
 }
 
-/*setup containers*/
+/*fade bg*/
+  
+html {
+	background-size: cover;
+	background: url("../assets/images/auto-01.jpg") no-repeat center center fixed;
+	background-blend-mode: darken;
+	transition: 3s;
+}
+html * { transition: none; }
+
 
 main {
 	width: 100%;
-	background: linear-gradient(to right, black, white);
+	/* background: linear-gradient(to right, black, white); */
 }
 
 .website-cont {
@@ -232,6 +241,25 @@ p {
 	color: #FEFFFD;
 	font-size: 14px;
 	font-weight: 500;
+}
+
+/*login-cont*/
+
+.input-field-login {
+	margin-top: 10px;
+	padding-bottom: 50px;
+}
+
+.error-message {
+	color: red;
+	display: none;
+  }
+  
+
+/*input-cont*/
+
+.setup-specs-cont {
+	display: none;
 }
 
 /*input cont1*/

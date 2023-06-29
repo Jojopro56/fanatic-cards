@@ -14,6 +14,9 @@
 <body>
 
     <main>
+
+        
+
         <div class="website-cont">
             <div class="setup-cont">
                 <div class="setup-content">
@@ -22,46 +25,60 @@
                         letterlijk op de kaart! Vul
                         hieronder wat gegevens in en
                         creëer zo je eigen 'Fanatic Club Card'. </h2>
-                    <h3>De Auto</h3>
-                    <div class="input-cont1">
-                        <div class="titel-auto p-en-input">
-                            <p>Titel Auto</p>
-                            <input placeholder="Zet hier de naam van je auto neer" class="titel-auto-input" type="text">
+
+                    <div class="login-cont">
+                        <h1>Login</h1>
+                        <div class="input-field-login"> <input type="text" id="codeInput" placeholder="Enter code">
+                            <button onclick="checkCode()">Submit</button>
+                            <p id="errorMessage" class="error-message"></p>
                         </div>
 
-                        <div class="topsnelheid p-en-input">
-                            <p>Topsnelheid</p>
-                            <input class="topsnelheid-input" type="text">
-                        </div>
-
-                        <div class="pk p-en-input">
-                            <p>PK</p>
-                            <input class="pk-input" type="text">
-                        </div>
-
-                        <div class="accel p-en-input">
-                            <p>0 Tot 100</p>
-                            <input class="accel-input" type="text">
-                        </div>
                     </div>
 
-                    <h3>Socials</h3>
+                    <div class="setup-specs-cont">
+                        <h3>De Auto</h3>
+                        <div class="input-cont1">
+                            <div class="titel-auto p-en-input">
+                                <p>Titel Auto</p>
+                                <input placeholder="Zet hier de naam van je auto neer" class="titel-auto-input"
+                                    type="text">
+                            </div>
 
-                    <div class="input-cont2">
-                        <div class="instagram p-en-input">
-                            <p>Instagram</p>
-                            <input class="instagram-input" type="text">
+                            <div class="topsnelheid p-en-input">
+                                <p>Topsnelheid</p>
+                                <input class="topsnelheid-input" type="text">
+                            </div>
+
+                            <div class="pk p-en-input">
+                                <p>PK</p>
+                                <input class="pk-input" type="text">
+                            </div>
+
+                            <div class="accel p-en-input">
+                                <p>0 Tot 100</p>
+                                <input class="accel-input" type="text">
+                            </div>
                         </div>
 
-                        <div class="facebook p-en-input">
-                            <p>Facebook</p>
-                            <input class="facebook-input" type="text">
+                        <h3>Socials</h3>
+
+                        <div class="input-cont2">
+                            <div class="instagram p-en-input">
+                                <p>Instagram</p>
+                                <input class="instagram-input" type="text">
+                            </div>
+
+                            <div class="facebook p-en-input">
+                                <p>Facebook</p>
+                                <input class="facebook-input" type="text">
+                            </div>
                         </div>
+
+                        <button onclick="downloadElementImage()" class="download">DOWNLOAD</button>
                     </div>
-
-                    <button onclick="downloadElementImage()" class="download">DOWNLOAD</button>
                 </div>
             </div>
+
             <div class="card-cont">
 
                 <div class="flag-box"><img src="assets/icons/flag.svg" alt=""></div>
@@ -107,9 +124,9 @@
 
                         </div>
 
-                        
+
                     </div>
-                    
+
                 </div>
 
                 <div class="logo-box"><img src="assets/icons/logo.svg" alt=""></div>
@@ -118,8 +135,9 @@
         </div>
     </main>
 
-
+    <script src="js/codes.js"></script>
     <script src="js/script.js"></script>
+
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 </body>
