@@ -1,6 +1,6 @@
 // fade bg 
 
-var bgImageArray = ["assets/images/auto-01.jpg","assets/images/auto-02.jpg","assets/images/auto-03.jpg"],
+var bgImageArray = ["/assets/images/auto-01.jpg","/assets/images/auto-02.jpg","/assets/images/auto-03.jpg"],
 base = "",
 secs = 6;
 
